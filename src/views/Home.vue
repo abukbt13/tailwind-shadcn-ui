@@ -108,7 +108,7 @@ const components= [
           <NavigationMenuList>
             <!-- Getting Started Section -->
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Getting Started With Shadcn by Abu</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
                   <li class="row-span-3">
@@ -117,7 +117,7 @@ const components= [
                           class="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           href="/"
                       >
-                        <img src="https://www.radix-vue.com/logo.svg" class="h-6 w-6" alt="logo">
+                        <img src="/IMG_20230904_093015.jpg" class="h-66 w-70" alt="logo">
                         <div class="mb-2 mt-4 text-lg font-medium">shadcn/ui</div>
                         <p class="text-sm leading-tight text-muted-foreground">
                           Beautifully designed components built with Radix UI and Tailwind CSS.
@@ -137,7 +137,7 @@ const components= [
                           :href="item.href"
                           class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                       >
-                        <div class="text-sm font-medium leading-none">{{ item.title }}</div>
+                        <div class="text-sm font-medium leading-none">{{ item.title }} <span class ="border-2 p-2 bg-gray-400 hover-bg-yello-200">Title</span></div>
                         <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">{{ item.description }}</p>
                       </a>
                     </NavigationMenuLink>
@@ -168,9 +168,19 @@ const components= [
 
             <!-- Documentation Section -->
             <NavigationMenuItem>
-              <NavigationMenuLink href="/docs" :class="navigationMenuTriggerStyle()">
-                Documentation
-              </NavigationMenuLink>
+              <NavigationMenuTrigger>Documents</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div class="border-1 bg-gray-200 w-100">
+                  <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    <li class="hover:bg-blue-200">
+                      <router-link class="text-decoration-none" to="login">Login</router-link>
+                    </li>
+                    <li>
+                      <router-link class="text-decoration-none" to="login">Register</router-link>
+                    </li>
+                  </ul>
+                </div>
+              </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu></div>
